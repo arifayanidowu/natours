@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/stizzle123/natours/issues"
   },
-  "homepage": "https://github.com/stizzle123/natours#readme"
+  "homepage": "https://github.com/stizzle123/natours#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
 }
