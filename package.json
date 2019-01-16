@@ -4,7 +4,6 @@
   "description": "Sass Preprocessor & BEM",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/main.css",
     "sass:watch": "node-sass sass/main.scss css/main.css --watch",
     "dev": "live-server"
   },

@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  font-family: "Dosis", sans-serif;
+  font-family: $font-family;
   line-height: 1.7;
   color: $color-grey-dark;
   box-sizing: border-box;
@@ -31,39 +31,21 @@ body {
   margin-right: 0;
 }
 
-.m-1 {
-  margin: 1rem;
+@for $i from 1 to $loop {
+  .m-#{$i} {
+    margin: #{$i}rem;
+  }
 }
 
-.m-2 {
-  margin: 2rem;
+@for $i from 1 to $loop {
+  .mt-#{$i} {
+    margin-top: #{$i}rem;
+  }
 }
-.m-3 {
-  margin: 3rem;
-}
-
-.mt-1 {
-  margin-top: 1rem;
-}
-
-.mt-2 {
-  margin-top: 2rem;
-}
-
-.mt-3 {
-  margin-top: 3rem;
-}
-
-.mb-1 {
-  margin-bottom: 1rem;
-}
-
-.mb-2 {
-  margin-bottom: 2rem;
-}
-
-.mb-3 {
-  margin-bottom: 3rem;
+@for $i from 1 through $loop {
+  .mb-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
 }
 
 .header {
@@ -78,16 +60,30 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
-}
 
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 10rem;
-}
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 10rem;
+    @include breakpoint(250px, 750px) {
+      top: 2rem;
+      left: 5rem;
+    }
+  }
+  &__logo {
+    height: 2.5rem;
+    @include breakpoint(250px, 750px) {
+      height: 1.5rem;
+    }
+  }
 
-.header__logo {
-  height: 2.5rem;
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 }
 
 .heading-primary {
@@ -95,53 +91,58 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 3rem;
-}
 
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.heading-primary--top {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 2s;
-}
-
-.heading-primary--bottom {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.74rem;
-  animation-name: moveInRight;
-  animation-duration: 2s;
-}
-@media (min-width: 250px) and (max-width: 750px) {
-  .heading-primary--top {
-    font-size: 3rem;
+  &--top {
+    display: block;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 1.6rem;
-  }
-  .heading-primary--bottom {
-    font-size: 1.8rem;
-    font-weight: 400;
-    letter-spacing: 0.5rem;
-  }
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
 
-  .header__logo-box {
-    top: 2rem;
-    left: 5rem;
+    @include breakpoint(250px, 750px) {
+      font-size: 3rem;
+      font-weight: 400;
+      letter-spacing: 1.6rem;
+    }
   }
+  &--bottom {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+    animation-name: moveInRight;
+    animation-duration: 2s;
 
-  .header__logo {
-    height: 1.5rem;
+    @include breakpoint(250px, 750px) {
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: 0.5rem;
+    }
   }
 }
+
+// @media (min-width: 250px) and (max-width: 750px) {
+//   .heading-primary--top {
+//     font-size: 3rem;
+//     font-weight: 400;
+//     letter-spacing: 1.6rem;
+//   }
+//   .heading-primary--bottom {
+//     font-size: 1.8rem;
+//     font-weight: 400;
+//     letter-spacing: 0.5rem;
+//   }
+
+//   .header__logo-box {
+//     top: 2rem;
+//     left: 5rem;
+//   }
+
+//   .header__logo {
+//     height: 1.5rem;
+//   }
+// }
 
 @keyframes moveInLeft {
   0% {
@@ -199,7 +200,7 @@ body {
 
 .btn:hover {
   transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 }
 
 .btn:active {
