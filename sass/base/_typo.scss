@@ -1,0 +1,35 @@
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 3rem;
+
+  &--top {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+
+    @include breakpoint(250px, 750px) {
+      font-size: 3rem;
+      font-weight: 400;
+      letter-spacing: 1.6rem;
+    }
+  }
+  &--bottom {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+
+    @include breakpoint(250px, 750px) {
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: 0.5rem;
+    }
+  }
+}

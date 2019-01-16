@@ -1,0 +1,23 @@
+.container {
+  padding-left: 15rem;
+  padding-right: 15rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@for $i from 1 to $loop {
+  .m-#{$i} {
+    margin: #{$i}rem;
+  }
+}
+
+@for $i from 1 to $loop {
+  .mt-#{$i} {
+    margin-top: #{$i}rem;
+  }
+}
+@for $i from 1 through $loop {
+  .mb-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
+}
