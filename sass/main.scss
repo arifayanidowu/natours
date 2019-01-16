@@ -1,14 +1,21 @@
 @import "abstracts/variables";
+
 @import "abstracts/func";
+
 @import "abstracts/mixins";
 
 @import "components/buttons";
 
+@import "layout/grid";
+
 @import "layout/header";
 
 @import "base/anims";
+
 @import "base/typo";
+
 @import "base/utils";
+
 @import "base/base";
 
 @import "pages/home";
