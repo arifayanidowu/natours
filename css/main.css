@@ -45,14 +45,17 @@
     color: #55c57a;
     display: inline-block;
     text-decoration: none;
-    border: 1px solid #55c57a;
-    padding: 1rem 5rem;
-    border-radius: 50px;
+    border-bottom: 1px solid #55c57a;
+    padding: 0.5rem 2rem;
     transition: all 0.2s; }
   .btn-text:hover {
     color: #fff;
     background: #55c57a;
-    box-shadow: 0 1rem 2rem rgba(61, 59, 59, 0.3); }
+    box-shadow: 0 1rem 2rem rgba(61, 59, 59, 0.15);
+    transform: translateY(-2px); }
+  .btn-text:active {
+    box-shadow: 0 0.5rem 1rem rgba(61, 59, 59, 0.15);
+    transform: translateY(0); }
 
 .row {
   max-width: 114rem;
