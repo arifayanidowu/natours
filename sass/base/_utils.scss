@@ -5,6 +5,7 @@
   margin-right: 0;
 }
 
+// Margin
 @for $i from 1 through $loop {
   .m-#{$i} {
     margin: #{$i}rem;
@@ -19,6 +20,48 @@
 @for $i from 1 through $loop {
   .mb-#{$i} {
     margin-bottom: #{$i}rem;
+  }
+}
+
+@for $i from 1 through $loop {
+  .ml-#{$i} {
+    margin-left: #{$i}rem;
+  }
+}
+
+@for $i from 1 through $loop {
+  .mr-#{$i} {
+    margin-right: #{$i}rem;
+  }
+}
+
+// Padding
+@for $i from 1 through $loop {
+  .p-#{$i} {
+    padding: #{$i}rem;
+  }
+}
+
+@for $i from 1 through $loop {
+  .pt-#{$i} {
+    padding-top: #{$i}rem;
+  }
+}
+@for $i from 1 through $loop {
+  .pb-#{$i} {
+    padding-bottom: #{$i}rem;
+  }
+}
+
+@for $i from 1 through $loop {
+  .pl-#{$i} {
+    padding-left: #{$i}rem;
+  }
+}
+
+@for $i from 1 through $loop {
+  .pr-#{$i} {
+    padding-right: #{$i}rem;
   }
 }
 

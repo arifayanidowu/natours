@@ -1,5 +1,5 @@
 .btn {
-  font-size: 1.6rem;
+  font-size: $font-size-default;
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -50,5 +50,24 @@
   &--animated {
     animation: moveInUp 1s ease-out 0.7s;
     animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+  font-size: $font-size-default;
+  &:link,
+  &:visited {
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid $color-primary;
+    padding: 1rem 5rem;
+    border-radius: 50px;
+    transition: all 0.2s;
+  }
+  &:hover {
+    color: $color-white;
+    background: $color-primary;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
   }
 }
