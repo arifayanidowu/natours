@@ -5,13 +5,13 @@
   margin-right: 0;
 }
 
-@for $i from 1 to $loop {
+@for $i from 1 through $loop {
   .m-#{$i} {
     margin: #{$i}rem;
   }
 }
 
-@for $i from 1 to $loop {
+@for $i from 1 through $loop {
   .mt-#{$i} {
     margin-top: #{$i}rem;
   }
@@ -20,4 +20,8 @@
   .mb-#{$i} {
     margin-bottom: #{$i}rem;
   }
+}
+
+.text-center {
+  text-align: center;
 }

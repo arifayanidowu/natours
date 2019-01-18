@@ -11,7 +11,7 @@
     backface-visibility: hidden; }
   .btn:hover {
     transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 1rem 2rem rgba(36, 35, 35, 0.2); }
     .btn:hover::after {
       transform: scaleX(1.4) scaleY(1.6);
       opacity: 0; }
@@ -41,12 +41,10 @@
 
 .row {
   max-width: 114rem;
-  background-color: #eee;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
   .row [class^="col-"] {
-    background: orangered;
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
@@ -152,6 +150,31 @@
         font-weight: 400;
         letter-spacing: 0.5rem; } }
 
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #7ed56f, #28b485);
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all 0.2s; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg);
+    text-shadow: 0.5rem 1rem 2rem rgba(36, 35, 35, 0.2); }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
 .container {
   padding-left: 15rem;
   padding-right: 15rem;
@@ -167,6 +190,21 @@
 .m-3 {
   margin: 3rem; }
 
+.m-4 {
+  margin: 4rem; }
+
+.m-5 {
+  margin: 5rem; }
+
+.m-6 {
+  margin: 6rem; }
+
+.m-7 {
+  margin: 7rem; }
+
+.m-8 {
+  margin: 8rem; }
+
 .mt-1 {
   margin-top: 1rem; }
 
@@ -175,6 +213,21 @@
 
 .mt-3 {
   margin-top: 3rem; }
+
+.mt-4 {
+  margin-top: 4rem; }
+
+.mt-5 {
+  margin-top: 5rem; }
+
+.mt-6 {
+  margin-top: 6rem; }
+
+.mt-7 {
+  margin-top: 7rem; }
+
+.mt-8 {
+  margin-top: 8rem; }
 
 .mb-1 {
   margin-bottom: 1rem; }
@@ -187,6 +240,21 @@
 
 .mb-4 {
   margin-bottom: 4rem; }
+
+.mb-5 {
+  margin-bottom: 5rem; }
+
+.mb-6 {
+  margin-bottom: 6rem; }
+
+.mb-7 {
+  margin-bottom: 7rem; }
+
+.mb-8 {
+  margin-bottom: 8rem; }
+
+.text-center {
+  text-align: center; }
 
 *,
 *::after,
@@ -201,5 +269,10 @@ html {
 body {
   font-family: "Dosis", sans-serif;
   line-height: 1.7;
-  color: #777;
+  color: #242323;
   box-sizing: border-box; }
+
+.section-about {
+  background: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -25vh; }
