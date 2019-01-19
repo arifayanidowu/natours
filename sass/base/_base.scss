@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  text-decoration: none;
 }
 
 html {
@@ -15,4 +16,8 @@ body {
   line-height: 1.7;
   color: $color-black;
   box-sizing: border-box;
+}
+
+sup {
+  color: #eeebeb;
 }
