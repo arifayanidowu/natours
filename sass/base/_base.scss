@@ -21,3 +21,7 @@ body {
 sup {
   color: #eeebeb;
 }
+
+a {
+  color: transparentize($color-black, 0.3);
+}
