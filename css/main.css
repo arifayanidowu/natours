@@ -441,6 +441,113 @@
         transform: none;
         box-shadow: none; }
 
+.navbar__checkbox {
+  display: none; }
+
+.navbar__button {
+  background-color: #fff;
+  width: 7rem;
+  height: 7rem;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 2000;
+  text-align: center;
+  box-shadow: 0 1rem 3rem rgba(61, 59, 59, 0.1);
+  cursor: pointer; }
+
+.navbar__background {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#7ed56f, #28b485);
+  z-index: 1000;
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+
+.navbar__nav {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
+.navbar__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center; }
+
+.navbar__item {
+  margin: 1rem; }
+
+.navbar__link:link, .navbar__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 229%;
+  transition: all 0.4s; }
+
+.navbar__link:hover, .navbar__link:active {
+  background-position: 100%;
+  color: #55c57a;
+  transform: translateX(1rem); }
+
+.navbar__checkbox:checked ~ .navbar__background {
+  transform: scale(80); }
+
+.navbar__checkbox:checked ~ .navbar__nav {
+  opacity: 1;
+  width: 100%; }
+
+.navbar__icon {
+  position: relative;
+  margin-top: 3.5rem; }
+  .navbar__icon, .navbar__icon::before, .navbar__icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: rgba(61, 59, 59, 0.829);
+    display: inline-block; }
+  .navbar__icon::before, .navbar__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s; }
+  .navbar__icon::before {
+    top: -0.8rem; }
+  .navbar__icon::after {
+    top: 0.8rem; }
+
+.navbar__button:hover .navbar__icon::before {
+  top: -1rem; }
+
+.navbar__button:hover .navbar__icon::after {
+  top: 1rem; }
+
+.navbar__checkbox:checked + .navbar__button .navbar__icon {
+  background-color: transparent; }
+
+.navbar__checkbox:checked + .navbar__button .navbar__icon::before {
+  top: 0;
+  transform: rotate(225deg); }
+
+.navbar__checkbox:checked + .navbar__button .navbar__icon::after {
+  top: 0;
+  transform: rotate(-225deg); }
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
