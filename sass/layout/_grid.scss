@@ -14,7 +14,7 @@
   }
 
   @include responsiv-sm($sm) {
-    max-width: 25rem;
+    max-width: 80%;
   }
 
   [class^="col-"] {

@@ -21,11 +21,18 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all 0.4s 0.2s;
+    @include responsiv-md($md) {
+      height: 50%;
+    }
   }
 
   &__left {
     width: 33.333333%;
     display: table-cell;
+
+    @include responsiv-md($md) {
+      width: 50%;
+    }
   }
 
   &__right {
@@ -33,6 +40,9 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+    @include responsiv-md($md) {
+      width: 50%;
+    }
   }
 
   &__img {
@@ -53,6 +63,11 @@
     -webkit-hyphens: auto;
     -o-hyphens: auto;
     hyphens: auto;
+
+    @include responsiv-md($md) {
+      column-count: 1;
+      text-align: center;
+    }
   }
 
   &:target {

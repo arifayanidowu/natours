@@ -73,7 +73,7 @@
 
   @include responsiv-md($md) {
     background-image: linear-gradient(
-        105deg,
+        115deg,
         rgba($color-white, 0.9) 0%,
         rgba($color-white, 0.9) 65%,
         transparent 65%
@@ -99,18 +99,6 @@
 
     @include responsiv-sm($sm) {
       width: 100%;
-    }
-  }
-
-  &__submit {
-    @include responsiv-md($md) {
-      width: auto;
-      padding: 0 6rem;
-    }
-
-    @include responsiv-sm($sm) {
-      width: auto;
-      padding: 0 5rem;
     }
   }
 }

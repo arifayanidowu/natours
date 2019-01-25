@@ -100,7 +100,7 @@
   }
 
   &__checkbox:checked ~ &__background {
-    transform: scale(80);
+    transform: scale(100);
   }
 
   &__checkbox:checked ~ &__nav {
@@ -120,7 +120,8 @@
     &::before,
     &::after {
       width: 3rem;
-      height: 2px;
+      height: 3px;
+      border-radius: 50px;
       background-color: $color-black;
       display: inline-block;
       @include responsiv-md($md) {
@@ -168,9 +169,11 @@
   &__checkbox:checked + &__button &__icon::before {
     top: 0;
     transform: rotate(225deg);
+    background-color: $color-primary;
   }
   &__checkbox:checked + &__button &__icon::after {
     top: 0;
     transform: rotate(-225deg);
+    background-color: $color-primary;
   }
 }
