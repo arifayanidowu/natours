@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Author" content="Arifayan Idowu" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Natours &mdash; Exciting tours for adventurous people</title>
     <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
@@ -78,21 +79,18 @@
           </div>
           <div class="col-1-of-2">
             <div class="composition">
-              <img
-                src="img/nat-1-large.jpg"
-                alt="Photo 1"
-                class="composition__photo composition__photo--p1"
-              />
-              <img
-                src="img/nat-2-large.jpg"
-                alt="Photo 2"
-                class="composition__photo composition__photo--p2"
-              />
-              <img
-                src="img/nat-3-large.jpg"
-                alt="Photo 3"
-                class="composition__photo composition__photo--p3"
-              />
+              <img sizes="(max-width: 900px) 20vw,(max-width: 600px) 30vw, 300px" alt="Photo 1" srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+              src="img/nat-1-large.jpg"
+              class="composition__photo composition__photo--p1"
+              >
+              <img sizes="(max-width: 900px) 20vw,(max-width: 600px) 30vw, 300px" alt="Photo 2" srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+              src="img/nat-2-large.jpg"
+              class="composition__photo composition__photo--p2"
+              >
+              <img sizes="(max-width: 900px) 20vw,(max-width: 600px) 30vw, 300px" alt="Photo 3" srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+              src="img/nat-3-large.jpg"
+              class="composition__photo composition__photo--p3"
+              >
             </div>
           </div>
         </div>
@@ -348,7 +346,9 @@
 
         <picture class="footer__logo">
           <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x," media="(max-width: 37.5em)">
-            <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo">
+            <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo"
+              src="img/logo-green-2x.png"
+            >
         </picture>
         
       </div>
