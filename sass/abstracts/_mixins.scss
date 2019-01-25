@@ -1,5 +1,20 @@
-@mixin breakpoint($min, $max) {
-  @media (min-width: #{$min}) and (max-width: #{$max}) {
+@mixin responsiv-sm($breakpoint) {
+  @media only screen and (max-width: #{$breakpoint}) {
+    @content;
+  }
+}
+@mixin responsiv-md($breakpoint) {
+  @media only screen and (max-width: #{$breakpoint}) {
+    @content;
+  }
+}
+@mixin responsiv-lg($breakpoint) {
+  @media only screen and (max-width: #{$breakpoint}) {
+    @content;
+  }
+}
+@mixin responsiv-xl($breakpoint) {
+  @media only screen and (min-width: #{$breakpoint}) {
     @content;
   }
 }

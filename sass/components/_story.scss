@@ -10,6 +10,16 @@
   transform: skewX(-12deg);
   transition: all 0.5s;
 
+  @include responsiv-md($md) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include responsiv-sm($sm) {
+    transform: skewX(0);
+  }
+
   &__shape {
     width: 15rem;
     height: 15rem;
@@ -21,6 +31,10 @@
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
     overflow: hidden;
+
+    @include responsiv-sm($sm) {
+      transform: translateX(-3rem) skewX(0);
+    }
   }
 
   &__img {
@@ -34,6 +48,9 @@
   &__text {
     transform: skewX(12deg);
     backface-visibility: hidden;
+    @include responsiv-sm($sm) {
+      transform: skewX(0);
+    }
   }
 
   &__caption {

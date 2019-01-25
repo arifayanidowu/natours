@@ -15,11 +15,18 @@
     text-align: center;
     box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
     cursor: pointer;
+
+    @include responsiv-md($md) {
+      width: 4rem;
+      height: 4rem;
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__background {
-    width: 6rem;
-    height: 6rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     position: fixed;
     top: 6.5rem;
@@ -30,6 +37,11 @@
     );
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    @include responsiv-md($md) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
 
     // transform: scale(80);
   }
@@ -42,7 +54,7 @@
     left: 0;
     z-index: 1500;
     opacity: 0;
-
+    visibility: hidden;
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
@@ -94,11 +106,16 @@
   &__checkbox:checked ~ &__nav {
     opacity: 1;
     width: 100%;
+    visibility: visible;
   }
 
   &__icon {
     position: relative;
     margin-top: 3.5rem;
+    @include responsiv-md($md) {
+      margin-top: 1.75rem;
+    }
+
     &,
     &::before,
     &::after {
@@ -106,6 +123,9 @@
       height: 2px;
       background-color: $color-black;
       display: inline-block;
+      @include responsiv-md($md) {
+        width: 2rem;
+      }
     }
 
     &::before,
@@ -117,17 +137,29 @@
     }
     &::before {
       top: -0.8rem;
+      @include responsiv-md($md) {
+        top: -0.6rem;
+      }
     }
     &::after {
       top: 0.8rem;
+      @include responsiv-md($md) {
+        top: 0.6rem;
+      }
     }
   }
 
   &__button:hover &__icon::before {
     top: -1rem;
+    @include responsiv-md($md) {
+      top: -0.5rem;
+    }
   }
   &__button:hover &__icon::after {
     top: 1rem;
+    @include responsiv-md($md) {
+      top: 0.5rem;
+    }
   }
 
   &__checkbox:checked + &__button &__icon {

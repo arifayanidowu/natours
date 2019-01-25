@@ -9,6 +9,17 @@
 
 html {
   font-size: 62.5%;
+
+  @include responsiv-lg($lg) {
+    font-size: 56.25%;
+  }
+
+  @include responsiv-md($md) {
+    font-size: 50%;
+  }
+  @include responsiv-xl($xl) {
+    font-size: 75%;
+  }
 }
 
 body {

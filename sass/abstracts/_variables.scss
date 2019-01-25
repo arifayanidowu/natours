@@ -18,7 +18,19 @@ $color-black: rgba(61, 59, 59, 0.829);
 
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
 $gutter-horizontal: 6rem;
 
 $i: 1;
 $loop: 8;
+
+$breakpoints: (
+  sm: 41.7em,
+  md: 56.25em,
+  lg: 75em,
+  xl: 112.5em
+);
+$sm: map-get($breakpoints, sm);
+$md: map-get($breakpoints, md);
+$lg: map-get($breakpoints, lg);
+$xl: map-get($breakpoints, xl);

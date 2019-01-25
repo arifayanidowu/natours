@@ -2,6 +2,10 @@
   background: $color-grey-light-1;
   padding: 25rem 0;
   margin-top: -25vh;
+
+  @include responsiv-md($md) {
+    padding: 20rem 0;
+  }
 }
 
 .section-features {
@@ -19,18 +23,28 @@
   & > * {
     transform: skewY(7deg);
   }
+  @include responsiv-md($md) {
+    padding: 10rem 0;
+  }
 }
 
 .section-tours {
   background: $color-grey-light-1;
   padding: 25rem 0 15rem 0;
   margin-top: -10rem;
+  @include responsiv-md($md) {
+    padding: 20rem 0 10rem 0;
+  }
 }
 
 .section-stories {
   padding: 15rem 0;
   position: relative;
   overflow: hidden;
+
+  @include responsiv-md($md) {
+    padding: 10rem 0;
+  }
 }
 
 .section-book {
@@ -40,6 +54,9 @@
     $color-primary-light,
     $color-primary-dark
   );
+  @include responsiv-md($md) {
+    padding: 10rem 0;
+  }
 }
 
 .book {
@@ -53,10 +70,47 @@
   background-size: cover;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-primary-dark, 0.45);
-  height: 50rem;
+
+  @include responsiv-md($md) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 65%,
+        transparent 65%
+      ),
+      url(../img/nat-10.jpg);
+  }
+
+  @include responsiv-sm($sm) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 100%
+      ),
+      url(../img/nat-10.jpg);
+  }
 
   &__form {
     width: 50%;
     padding: 6rem;
+    @include responsiv-md($md) {
+      width: 65%;
+    }
+
+    @include responsiv-sm($sm) {
+      width: 100%;
+    }
+  }
+
+  &__submit {
+    @include responsiv-md($md) {
+      width: auto;
+      padding: 0 6rem;
+    }
+
+    @include responsiv-sm($sm) {
+      width: auto;
+      padding: 0 5rem;
+    }
   }
 }

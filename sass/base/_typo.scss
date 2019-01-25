@@ -8,14 +8,13 @@
     display: block;
     font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 3.5rem;
+    letter-spacing: 1.5rem;
     animation-name: moveInLeft;
     animation-duration: 2s;
 
-    @include breakpoint(250px, 750px) {
-      font-size: 3rem;
-      font-weight: 400;
-      letter-spacing: 1.6rem;
+    @include responsiv-sm($sm) {
+      font-size: 5rem;
+      letter-spacing: 0.5rem;
     }
   }
   &--bottom {
@@ -26,9 +25,8 @@
     animation-name: moveInRight;
     animation-duration: 2s;
 
-    @include breakpoint(250px, 750px) {
-      font-size: 1.8rem;
-      font-weight: 400;
+    @include responsiv-sm($sm) {
+      font-size: 1.5rem;
       letter-spacing: 0.5rem;
     }
   }
@@ -49,6 +47,14 @@
   color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s;
+
+  @include responsiv-md($md) {
+    font-size: 2.5rem;
+  }
+
+  @include responsiv-sm($sm) {
+    font-size: 2rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(15deg);

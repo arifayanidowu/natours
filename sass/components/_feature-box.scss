@@ -7,6 +7,10 @@
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
   transition: transform 0.3s;
 
+  @include responsiv-md($md) {
+    padding: 2rem;
+  }
+
   &__icon {
     color: transparent;
     display: inline-block;

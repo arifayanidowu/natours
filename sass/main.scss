@@ -2,6 +2,11 @@
 @import "abstracts/func";
 @import "abstracts/mixins";
 
+@import "base/base";
+@import "base/anims";
+@import "base/typo";
+@import "base/utils";
+
 @import "components/buttons";
 @import "components/composition";
 @import "components/feature-box";
@@ -15,10 +20,5 @@
 @import "layout/header";
 @import "layout/footer";
 @import "layout/navbar";
-
-@import "base/anims";
-@import "base/typo";
-@import "base/utils";
-@import "base/base";
 
 @import "pages/home";

@@ -3,12 +3,32 @@
   margin: 0 auto;
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+    @include responsiv-md($md) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+
+  @include responsiv-md($md) {
+    max-width: 50rem;
+    // padding: 0 3rem;
+  }
+
+  @include responsiv-sm($sm) {
+    max-width: 25rem;
   }
 
   [class^="col-"] {
     float: left;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+      @include responsiv-md($md) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include responsiv-md($md) {
+      width: 100% !important;
     }
   }
 
