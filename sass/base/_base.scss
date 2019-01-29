@@ -36,3 +36,8 @@ sup {
 a {
   color: transparentize($color-black, 0.3);
 }
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}

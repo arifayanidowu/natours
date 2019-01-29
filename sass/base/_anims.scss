@@ -36,3 +36,20 @@
     transform: translate(0);
   }
 }
+
+@keyframes rotateX {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: rotate(225deg);
+  }
+}
+@keyframes rotateY {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: rotate(-225deg);
+  }
+}

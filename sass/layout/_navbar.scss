@@ -29,8 +29,8 @@
     height: 3rem;
     border-radius: 50%;
     position: fixed;
-    top: 6.5rem;
-    right: 6.5rem;
+    top: 6.6rem;
+    right: 6.6rem;
     background-image: radial-gradient(
       $color-primary-light,
       $color-primary-dark
@@ -168,12 +168,14 @@
   }
   &__checkbox:checked + &__button &__icon::before {
     top: 0;
-    transform: rotate(225deg);
+    // transform: translateY(0), rotate(225deg);
+    animation: rotateX 0.3s ease-out forwards;
     background-color: $color-primary;
   }
   &__checkbox:checked + &__button &__icon::after {
     top: 0;
-    transform: rotate(-225deg);
+    // transform: translateY(0), rotate(-225deg);
+    animation: rotateY 0.3s ease-out forwards;
     background-color: $color-primary;
   }
 }
